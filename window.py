@@ -1,5 +1,4 @@
 from tkinter import *
-import numsnsym
 
 #ability to write
 def submit():
@@ -12,31 +11,30 @@ def backspace():
     entry.delete(len(entry.get())-1, END)
 
 window = Tk()
+window.geometry("500x500")
 
-entry = Entry(window, font = ("Arial", 50))
-entry.pack(side=LEFT)
+entry = Entry(window, font=("Arial", 50))
+entry.pack(side=TOP) #puts the writing area on top
 
-submitButton = Button(window, text="submit", command=submit)
-submitButton.pack(side=RIGHT)
+#submitButton = Button(window, text="submit", command=submit)
+#submitButton.pack(side=RIGHT)
 
-deleteButton = Button(window, text="delete", command=delete)
-deleteButton.pack(side=RIGHT)
+#deleteButton = Button(window, text="delete", command=delete)
+#deleteButton.pack(side=RIGHT)
 
-backspaceButton = Button(window, text="backspace", command=backspace)
-backspaceButton.pack(side=RIGHT)
+#backspaceButton = Button(window, text="backspace", command=backspace)
+#backspaceButton.pack(side=RIGHT)
 
-OneButton = Button(window, text="1", command=lambda: numsnsym.one(1))
-OneButton.pack(side=TOP)
-#TwoButton = Button(window, text="2", command=)
-#ThreeButton = Button(window, text="3", command=)
-#FourButton = Button(window, text="4", command=)
-#FiveButton = Button(window, text="5", command=)
-#SixButton = Button(window, text="6", command=)
-#SevenButton = Button(window, text="7", command=)
-#EightButton = Button(window, text="8", command=)
-#NineButton = Button(window, text="9", command=)
-
-
-
+frame = Frame(window, bg="silver", bd=3)
+frame.pack()
+Button(frame, text="1", width=3).pack(side=LEFT)
+Button(frame, text="2", width=3).pack(side=LEFT)
+Button(frame, text="3", width=3).pack(side=LEFT)
+Button(frame, text="4", width=3).pack(side=BOTTOM)
+Button(frame, text="5", width=3).pack(side=BOTTOM)
+Button(frame, text="6", width=3).pack(side=BOTTOM)
+Button(frame, text="7", width=3).pack(side=BOTTOM)
+Button(frame, text="8", width=3).pack(side=BOTTOM)
+Button(frame, text="9", width=3).pack(side=BOTTOM)  
 
 window.mainloop()

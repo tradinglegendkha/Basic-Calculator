@@ -1,9 +1,10 @@
-from tkinter import *
-from window import entry
+from tkinter import Entry, INSERT #fixed the double top issue
 
-def one(x):
-    entry.insert(INSERT, x)
 
+def one(self):
+    x="1"
+    Entry.insert(self, INSERT, x)
+"""
 def two(x):
     entry.insert(INSERT, x)
 
@@ -27,3 +28,4 @@ def eight(x):
 
 def nine(x):
     entry.insert(INSERT, x)
+"""
